@@ -283,11 +283,14 @@
                 </svg>
                 <h1 class="nav-title">Task.io</h1>
             </div>
-
+            {% if request.user.is_authenticated %}
+            <h1>{{reuest.user}}</h1>
+            {% else %}
             <div class="login_sign_btns">
                 <a href="{% url 'login' %}"><button>Login</button></a>
                 <a href="{% url 'register'%}"><button>Signup</button></a>
             </div>
+            {% endif %}
         </nav>
     </header>
     <section class="hero-con">
