@@ -1,0 +1,452 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block extra_head_links %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}"> -->
+
+{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        margin: 0;
+        background: #DAF2FF;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        margin-right: 10px;
+    }
+
+    .nav_links {
+        display: grid;
+        background: #69B0D8;
+        width: 250px;
+        height: 100vh;
+    }
+
+    .nav_links a {
+        text-decoration: none;
+        margin-left: 100px;
+        font-family: 'Inter', sans-serif;
+        color: black;
+        font-weight: bold;
+    }
+
+    .tasks_url {
+        display: flex;
+        margin-top: 100px;
+    }
+
+    .tasks_url p {
+        margin-top: 2px;
+    }
+
+    .tasks_url2 {
+        display: flex;
+        margin-top: -20vh;
+    }
+
+    .tasks_url2 p {
+        margin-top: 2px;
+    }
+
+    .tasks_url3 {
+        display: flex;
+        margin-top: -35vh;
+    }
+
+    .tasks_url3 p {
+        margin-top: 2px;
+    }
+
+    .authenticated {
+        margin-left: 400px;
+        margin-top: -100vh;
+    }
+
+    .no_tasks_msg {
+        margin-left: 400px;
+
+    }
+
+    .user_profile {
+        display: flex;
+        margin-left: 55vw;
+    }
+
+    .user_profile p {
+        margin-right: 10px;
+        font-size: 20px;
+        margin-top: 12px;
+    }
+
+    .user_profile a {
+        margin-top: 15px;
+    }
+
+    .user_profile svg {
+        width: 49px;
+        height: 47px;
+        flex-shrink: 0;
+        fill: #69B0D8;
+    }
+
+    .task_view {
+        display: grid;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .task {
+        display: flex;
+        padding: 5px;
+        background: #92C8E6;
+        width: 1000px;
+        height: 40px;
+        flex-shrink: 0;
+        margin-left: 250px;
+        border-radius: 10px;
+    }
+
+    .task h1 {
+        color: #000;
+        font-family: 'Inter', sans-serif;
+        font-size: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        /* 71.429% */
+    }
+
+    .task_btn {
+        margin-left: 600px;
+        margin-top: 5px;
+    }
+
+    .task_btn_1 {
+        border-radius: 20px;
+        background: rgba(0, 56, 255, 0.63);
+        width: 58px;
+        height: 30px;
+        flex-shrink: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    .task_btn_2 {
+        border-radius: 20px;
+        background: rgba(250, 12, 12, 0.62);
+        width: 58px;
+        height: 30px;
+        flex-shrink: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    .no_tasks_msg {
+        text-align: center;
+        margin-left: 150px;
+        font-size: 40px;
+        margin-top: 100px;
+        font-family: 'Inter', sans-serif;
+    }
+
+    .welcome_h1 {
+        margin-left: 400px;
+    }
+
+    .task_count {
+        display: grid;
+        margin-left: 180px;
+        margin-top: 40px;
+    }
+
+    .task_count h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .task_count p {
+        text-align: center;
+    }
+
+    .tasks_count {
+        display: flex;
+        margin-left: 80px;
+        justify-content: center;
+    }
+
+
+    .note_count {
+        display: grid;
+        margin-left: 180px;
+        margin-top: 130px;
+        margin-bottom: 10px;
+    }
+
+    .note_count h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .note_count p {
+        text-align: center;
+    }
+
+    .notes_count {
+        display: flex;
+        margin-left: 80px;
+        justify-content: center;
+    }
+
+
+    .count_1 {
+        display: grid;
+        width: 616px;
+        height: 122px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: rgba(255, 0, 0, 0.54);
+        margin-right: 50px;
+    }
+
+    .count_1 h1 {
+        color: #fff;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .count_1 p {
+        color: #fff;
+        font-family: 'Katibeh', sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -20px;
+    }
+
+    .count_2 {
+        display: grid;
+        width: 616px;
+        height: 122px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: rgba(0, 128, 0, 0.74);
+        margin-right: 50px;
+    }
+
+    .count_2 h1 {
+        color: #fff;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .count_2 p {
+        color: #fff;
+        font-family: 'Katibeh', sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -20px;
+    }
+
+    .count_3 {
+        display: grid;
+        width: 316px;
+        height: 122px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: rgba(0, 128, 0, 0.74);
+    }
+
+    .count_3 h1 {
+        color: #fff;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .count_3 p {
+        color: #FFF;
+        font-family: 'Katibeh', sans-serif;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -20px;
+    }
+</style>
+
+<body>
+    <div class="nav_links">
+        <a href="{% url 'dashboard' %}" class="tasks_url"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M19 5V7H15V5H19ZM9 5V11H5V5H9ZM19 13V19H15V13H19ZM9 17V19H5V17H9ZM21 3H13V9H21V3ZM11 3H3V13H11V3ZM21 11H13V21H21V11ZM11 15H3V21H11V15Z"
+                    fill="black" />
+            </svg>
+            <p>Dashboard</p>
+        </a>
+        <a href="{% url 'tasks' %}" class="tasks_url2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M12 22C12.8 22 13.6 21.9 14.3 21.7C13.9 21.2 13.5 20.6 13.3 19.9C12.9 20 12.4 20 12 20C7.6 20 4 16.4 4 12C4 7.6 7.6 4 12 4C12.8 4 13.5 4.1 14.2 4.3L15.8 2.7C14.6 2.3 13.3 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22ZM6.5 11.5L7.9 10.1L11 13.2L19.6 4.6L21 6L11 16L6.5 11.5ZM19 14L17.74 16.75L15 18L17.74 19.26L19 22L20.25 19.26L23 18L20.25 16.75L19 14Z"
+                    fill="black" />
+            </svg>
+            <p>Tasks</p>
+        </a>
+        <a href="{% url 'notes' %}" class="tasks_url3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M16 9H21.5L16 3.5V9ZM7 2H17L23 8V18C23 18.5304 22.7893 19.0391 22.4142 19.4142C22.0391 19.7893 21.5304 20 21 20H7C5.89 20 5 19.1 5 18V4C5 3.46957 5.21071 2.96086 5.58579 2.58579C5.96086 2.21071 6.46957 2 7 2ZM3 6V22H21V24H3C2.46957 24 1.96086 23.7893 1.58579 23.4142C1.21071 23.0391 1 22.5304 1 22V6H3Z"
+                    fill="black" />
+            </svg>
+            <p>Notes</p>
+        </a>
+    </div>
+    <div class="authenticated">
+
+        {% if request.user.is_authenticated %}
+        <div class="user_profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="49" height="47" viewBox="0 0 49 47" fill="none">
+                <path
+                    d="M24.5 40.42C18.375 40.42 12.9605 37.412 9.8 32.9C9.8735 28.2 19.6 25.615 24.5 25.615C29.4 25.615 39.1265 28.2 39.2 32.9C36.0395 37.412 30.625 40.42 24.5 40.42ZM24.5 7.05C26.4493 7.05 28.3188 7.79277 29.6972 9.1149C31.0756 10.437 31.85 12.2302 31.85 14.1C31.85 15.9698 31.0756 17.763 29.6972 19.0851C28.3188 20.4072 26.4493 21.15 24.5 21.15C22.5507 21.15 20.6812 20.4072 19.3028 19.0851C17.9244 17.763 17.15 15.9698 17.15 14.1C17.15 12.2302 17.9244 10.437 19.3028 9.1149C20.6812 7.79277 22.5507 7.05 24.5 7.05ZM24.5 0C21.2826 0 18.0967 0.607846 15.1243 1.78883C12.1518 2.96982 9.45092 4.70081 7.17588 6.88299C2.58124 11.2901 0 17.2674 0 23.5C0 29.7326 2.58124 35.7099 7.17588 40.117C9.45092 42.2992 12.1518 44.0302 15.1243 45.2112C18.0967 46.3922 21.2826 47 24.5 47C30.9978 47 37.2295 44.5241 41.8241 40.117C46.4188 35.7099 49 29.7326 49 23.5C49 10.5045 37.975 0 24.5 0Z"
+                    fill="#69B0D8" />
+            </svg>
+            <p>{{request.user}}</p>
+            <a href="{% url 'logout' %}">Logout</a>
+        </div>
+        {% else %}
+        <a href="{% url 'login' %}">Login </a>
+        {% endif %}
+    </div>
+
+    <h1 class="welcome_h1">Welcome {{request.user}}</h1>
+
+    <div class="task_count">
+        <h1>Tasks</h1>
+        <div class="tasks_count">
+            <div class="count_1">
+                <h1>Total tasks</h1>
+                <p>{{count3}}</p>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="note_count">
+        <h1>Notes</h1>
+        <div class="notes_count">
+            <div class="count_2">
+                <h1>Total notes</h1>
+                <p>0</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- <h1>You have {{count}} pending tasks</h1> -->
+
+    <!-- <a href="{%url 'tasks_create'%}">Create post</a> -->
+
+
+    <div>
+        {% for task in tasks %}
+
+
+        <!-- <div class="task_view">
+            <div class="task">
+                <h1>{{task.title}}</h1>
+                <div class="task_btn">
+                   <a href="{%url 'edit' task.id %}"><button class="task_btn_1">Edit</button></a> 
+                   <a href="{%url 'delete' task.id %}"><button class="task_btn_2">Delete</button></a> 
+                </div>
+            </div>
+        </div> -->
+        {% empty %}
+
+        <!-- <h2 class="no_tasks_msg">You have no tasks!</h2> -->
+
+        {% endfor %}
+    </div>
+
+
+
+
+
+
+</body>
+<!-- <script>
+
+
+    var actions = document.getElementById("action_div")
+
+    var btn = document.getElementById("myBtn");
+
+    var btn2 = document.getElementById("myBtn");
+
+
+    var counter = document.getElementById("counter");
+    var save = document.getElementById("save");
+
+    var media = document.getElementById("media")
+
+    var options = document.getElementById("more_options_btn")
+
+
+
+    // var post_body = document.getElementById("body_p")
+    // var post_id = document.getElementById("prev")
+
+
+
+    var count = 0;
+
+    btn.addEventListener("click", function onClick() {
+        count++;
+        counter.innerText = count;
+
+        btn.style.color = "blue"
+    });
+
+    save.addEventListener("click", function onClick() {
+
+        save.style.color = "#d60505"
+    });
+
+
+    const share = (id) => {
+        let main_media = document.getElementById(`media-${id}`)
+        main_media.style.display = main_media.style.display == 'grid' ? 'none' : 'grid'
+    }
+
+    const more = (id) => {
+        let action_media = document.getElementById(`action_div-${id}`)
+        action_media.style.display = action_media.style.display == 'grid' ? 'none' : 'grid'
+    }
+
+    // save.addEventListener("click", () => {
+    //   localStorage.setItem(`${post_body}`, JSON.stringify(post_body));
+    //   location.href = `${post_id}`;
+    // });
+
+</script> -->
+
+</html>
+
+{% endblock content %}

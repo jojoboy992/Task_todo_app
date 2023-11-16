@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block extra_head_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+{% for post in category_posts %}
+
+<div class="post_div">
+    <div class="post_div2">
+
+        <div class="content">
+
+            <div>
+                <img src="/static/css/profile.png" alt="" class="profile_picture">
+
+                <div>
+                    <h1 style="font-size: 25px;" class="user_profile">{{post.User}}</h1>
+                    {% if user.is_authenticated %}
+                    <h1 class="more_options" id="more_options_btn-{{post.id}}" style="cursor: pointer;"
+                        onclick="more('{{post.id}}')">∴</h1>
+
+                    {% endif %}
+
+                    <div>
+                        <img src="{{post.image.url}}" width="200" height="200" alt="" class="post_img">
+
+                        <div class="action_div_2" id="action_div-{{post.id}}">
+                            <div class="sub_action_div_2">
+                                <div class="edit_btn_div_2">
+                                    <a href="{% url 'post_edit' post.pk %}" class="edit_btn_2">Edit Post</a>
+                                </div>
+                                <div class="delete_btn_div">
+                                    <a href="{% url 'post_delete' post.pk %}" class="delete_btn">Delete Post</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <h2 class="post_h2">
+                        {{ post.title }}
+                    </h2>
+                    <div class="like_div">
+                        <h1 style="margin-left: 50px;" id="myBtn">♥</h1>
+                        <p id="counter" style="margin-left: -50px;">0</p>
+                        <p>Likes</p>
+                        <h1 class="save_btn" id="save">🠷
+                        </h1>
+                        <h1 id="share-{{post.id}}" class="share_btn" onclick="share('{{post.id}}')">⮱
+                        </h1>
+
+                    </div>
+
+
+                    <p id="body_p">{{ post.body }}</p>
+
+                    <h1>{{ post.time1 }}</h1>
+                    <h1 style="color: green;"> Posted On: {{ post.timestamp }}</h1>
+
+                    <a href="{% url 'content_prev' post.id %}"> More Info</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="social_media" id="media-{{post.id}}">
+
+        <h1>Share to...</h1>
+
+        <div class="twitter" style="display: flex;">
+
+            <h2 class="twitter_h2">Twitter</h2>
+            <img src="/static/css/twitter.png" alt="" width="50" height="50">
+
+        </div>
+
+        <div class="instagram" style="display: flex;">
+
+            <h2 class="instagram_h2">Instagram</h2>
+            <img src="/static/css/insta.png" alt="" width="50" height="50">
+
+        </div>
+
+        <div class="facebook" style="display: flex;">
+
+            <h2 class="facebook_h2">Facebook</h2>
+            <img src="/static/css/face.png" alt="" width="50" height="50">
+
+        </div>
+
+        <div class="whatsapp" style="display: flex;">
+
+            <h2 class="whatsapp_h2">Whatsapp</h2>
+            <img src="/static/css/what.png" alt="" width="50" height="50">
+
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+{% endfor %}
+
+
+<script>
+
+
+    var actions = document.getElementById("action_div")
+
+    var btn = document.getElementById("myBtn");
+
+    var btn2 = document.getElementById("myBtn");
+
+
+    var counter = document.getElementById("counter");
+    var save = document.getElementById("save");
+
+    var media = document.getElementById("media")
+
+    var options = document.getElementById("more_options_btn")
+
+
+
+    // var post_body = document.getElementById("body_p")
+    // var post_id = document.getElementById("prev")
+
+
+
+    var count = 0;
+
+    btn.addEventListener("click", function onClick() {
+        count++;
+        counter.innerText = count;
+
+        btn.style.color = "blue"
+    });
+
+    save.addEventListener("click", function onClick() {
+
+        save.style.color = "#d60505"
+    });
+
+
+    const share = (id) => {
+        let main_media = document.getElementById(`media-${id}`)
+        main_media.style.display = main_media.style.display == 'grid' ? 'none' : 'grid'
+    }
+
+    const more = (id) => {
+        let action_media = document.getElementById(`action_div-${id}`)
+        action_media.style.display = action_media.style.display == 'grid' ? 'none' : 'grid'
+    }
+
+    // save.addEventListener("click", () => {
+    //   localStorage.setItem(`${post_body}`, JSON.stringify(post_body));
+    //   location.href = `${post_id}`;
+    // });
+
+</script>
+
+
+
+</html>
+
+{% endblock content %}

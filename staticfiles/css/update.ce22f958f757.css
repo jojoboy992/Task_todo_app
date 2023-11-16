@@ -1,0 +1,213 @@
+header h1 #a {
+  color: white;
+  text-decoration: none;
+  font-size: 35px;
+}
+
+header {
+  background: green;
+  margin-top: -20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 130px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.create_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -240px;
+  padding: 10px;
+  border-radius: 20px;
+  background: yellowgreen;
+  align-self: center;
+}
+
+body {
+  background: lightgreen;
+}
+
+.post_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post_div2 {
+  display: grid;
+  margin: 5vw;
+}
+
+h2 a {
+  text-decoration: none;
+  color: #60b91c;
+  margin-left: 30px;
+}
+
+.post_div2 p {
+  color: #ff8d00;
+  font-size: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+.create_btn {
+  color: white;
+}
+
+.new_h1 {
+  color: white;
+  text-align: center;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  align-self: center;
+  margin-top: 150px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  display: none;
+}
+
+input[type="file"] {
+  padding: 90px;
+  margin-top: -50px;
+}
+
+input[type="file"]::before {
+  content: url("camera.7657f8630f00.png");
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  margin-top: 165px;
+  margin-left: -240px;
+}
+
+input[type="submit"] {
+  background: green;
+  border: none;
+  width: 150px;
+  padding: 5px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  margin-top: 250px;
+}
+input[type="text"] {
+  width: 600px;
+  height: 50px;
+  border: green solid 2px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+/* input{
+    font-size: 20px;
+  } */
+
+select {
+  width: 200px;
+  height: 30px;
+  background: white;
+  border-radius: 10px;
+  border: green solid 2px;
+}
+
+select option {
+  border-radius: 10px;
+}
+
+textarea {
+  width: 600px;
+  border: green solid 2px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  align-self: center;
+  margin-top: 140px;
+  margin-left: -100px;
+}
+
+label {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.action_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.edit_btn_div {
+  background: green;
+  width: 70px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 13px;
+  margin-right: 20px;
+}
+
+.edit_btn {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+
+.delete_btn_div {
+  background: red;
+  width: 80px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.delete_btn {
+  text-decoration: none;
+  font-size: 17.4px;
+  color: white;
+}
+
+.content_h1 {
+  color: #60b91c;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+.content_p {
+  color: #ff8d00;
+  font-size: 20px;
+  text-align: center;
+  align-self: center;
+}

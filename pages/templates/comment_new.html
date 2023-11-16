@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}
+<title>New Post</title>
+{% endblock %}
+
+{% block extra_head_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/comment.css' %}">
+{% endblock %}
+
+{% block a %}
+{% endblock %}
+
+{% block content %}
+<script src="https://use.fontawesome.com/3a2eaf6206.js"></script>
+
+
+<h1>Comment</h1>
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Post" id="post" />
+</form>
+
+
+{% endblock content %}

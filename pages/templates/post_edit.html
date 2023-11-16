@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% load static %}
+{% block title %}
+<title>Edit Post</title>
+{% endblock %}
+
+{% block extra_head_links %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/update.css' %}">
+{% endblock %}
+
+{% block a %}
+{% endblock %}
+
+{% block content %}
+
+<h1>Edit post</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <input type="submit" value="Update" />
+</form>
+
+{% endblock content %}

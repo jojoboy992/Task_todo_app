@@ -1,0 +1,470 @@
+header h1 #a {
+  color: white;
+  text-decoration: none;
+  font-size: 35px;
+}
+
+header {
+  background: #6868c4;
+  margin-top: -20px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 130px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links {
+  display: grid;
+  margin-top: 20vh;
+  margin-left: -30vw;
+}
+
+.nav-links img {
+  width: 50px;
+  height: 50px;
+}
+
+.plus {
+  margin-top: -40vh;
+}
+
+.prev_post_div{
+  margin-left: -100px;
+}
+
+.login_div {
+  margin-left: 1000px;
+  margin-top: -50px;
+}
+
+#user_logout {
+  margin-left: 300px;
+}
+
+.user_section {
+  margin-top: -40px;
+}
+
+.login_div_sign_up {
+  background: blue;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-left: 180px;
+}
+
+.create_btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -240px;
+  padding: 10px;
+  border-radius: 20px;
+  background: blue;
+  align-self: center;
+}
+
+#body_p {
+  max-width: 600px;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  color: black;
+  margin-top: -40px;
+}
+
+#myBtn {
+  font-size: 60px;
+  cursor: pointer;
+}
+
+.profile_picture {
+  width: 50px;
+  height: 50px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  margin-top: 114vh; */
+  margin-left: 100px;
+}
+
+#post_prev_btn {
+  width: 100px;
+  height: 40px;
+  background: #6868c4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.more_options {
+  margin-left: 540px;
+  margin-top: -50px;
+}
+
+.post_div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content {
+  border: 0.1px solid green;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.post_div2 {
+  position: relative;
+  display: grid;
+  margin: 5vw;
+}
+
+.like_div {
+  display: flex;
+  margin-left: 50px;
+  margin-top: -70px;
+}
+
+.like_div h1 {
+  margin: 60px;
+  font-size: 40px;
+}
+h2 {
+  text-decoration: none;
+  color: #60b91c;
+  margin-left: 30px;
+}
+
+.post_h2 {
+  margin-left: 230px;
+  font-size: 40px;
+}
+
+.post_img {
+  width: 550px;
+  height: 500px;
+  margin-left: 25px;
+}
+
+.action_div_2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 20px;
+  align-self: center;
+  background: white;
+  width: 500px;
+  height: 400px;
+  margin-top: -150px;
+  display: none;
+}
+
+.sub_action_div_2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 20px;
+  align-self: center;
+}
+
+.edit_btn_2 {
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+}
+
+.edit_btn_div_2 {
+  margin: 15px;
+  background: green;
+  width: 70px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 13px;
+  margin-right: 15px;
+}
+
+.prev_Comment_head{
+  margin-left: 45vw;
+}
+
+.user_profile_comment {
+  text-align: center;
+  margin-left: -50vw;
+}
+
+.post_div2 p {
+  color: #ff8d00;
+  font-size: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+.create_btn {
+  color: white;
+}
+
+.new_h1 {
+  color: white;
+  text-align: center;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  align-self: center;
+  margin-top: 150px;
+}
+
+input[type="file"]::-webkit-file-upload-button {
+  display: none;
+}
+
+input[type="file"] {
+  padding: 90px;
+  margin-top: -50px;
+}
+
+input[type="file"]::before {
+  content: url("camera.png");
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  margin-top: 165px;
+  margin-left: -170px;
+}
+
+input[type="submit"] {
+  background: green;
+  border: none;
+  width: 150px;
+  padding: 5px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  margin-top: 250px;
+}
+input[type="text"] {
+  width: 600px;
+  height: 50px;
+  border: green solid 2px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+input[type="text"] {
+  width: 600px;
+  height: 50px;
+  border: green solid 2px;
+  border-radius: 10px;
+  font-size: 25px;
+}
+
+/* input{
+    font-size: 20px;
+  } */
+
+select {
+  width: 200px;
+  height: 30px;
+  background: white;
+  border-radius: 10px;
+  border: green solid 2px;
+}
+
+select option {
+  border-radius: 10px;
+}
+
+textarea {
+  width: 600px;
+  border: green solid 2px;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+#camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  align-self: center;
+  margin-top: 140px;
+  margin-left: -100px;
+}
+
+label {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.delete_btn_div {
+  background: red;
+  width: 80px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 13px;
+}
+
+.delete_btn {
+  text-decoration: none;
+  font-size: 17.4px;
+  color: white;
+}
+
+.content_h1 {
+  color: #60b91c;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
+.content_p {
+  color: #6868c4;
+  font-size: 20px;
+  text-align: center;
+  align-self: center;
+  font-size: 25px;
+}
+
+.delete_p {
+  margin-top: -250px;
+  font-size: 40px;
+  color: green;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  width: 462px;
+}
+
+.delete_span {
+  color: red;
+}
+
+#delete_post_btn {
+  margin-top: -100px;
+}
+
+#cancel_delete_post_btn {
+  background: red;
+  color: white;
+  border: none;
+  width: 150px;
+  padding: 5px;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-self: center;
+  margin-top: 100px;
+}
+
+.save_btn {
+  cursor: pointer;
+  font-size: 70px;
+}
+
+.share_btn {
+  cursor: pointer;
+}
+
+.social_media {
+  background: #dae4ff;
+  height: 450px;
+  padding: 30px;
+  border-radius: 20px;
+  display: none;
+  position: absolute;
+  top: 170px;
+  left: 85px;
+}
+
+.twitter {
+  outline: 2px solid #00c0ff;
+}
+
+.twitter img {
+  padding: 10px;
+}
+
+.twitter_h2 {
+  color: black;
+  margin-right: 230px;
+}
+
+.instagram {
+  outline: 2px solid red;
+  margin-top: 15px;
+}
+
+.instagram img {
+  padding: 10px;
+}
+
+.instagram_h2 {
+  color: black;
+  margin-right: 200px;
+}
+
+.facebook {
+  outline: 2px solid blue;
+  margin-top: 15px;
+}
+
+.facebook img {
+  padding: 10px;
+}
+
+.facebook_h2 {
+  color: black;
+  margin-right: 205px;
+}
+
+.whatsapp {
+  outline: 2px solid green;
+  margin-top: 15px;
+}
+
+.whatsapp img {
+  padding: 10px;
+}
+
+.whatsapp_h2 {
+  color: black;
+  margin-right: 200px;
+}

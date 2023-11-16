@@ -1,0 +1,390 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block extra_head_links %}
+<!-- <link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}"> -->
+
+{% endblock %}
+
+{% block content %}
+
+<body>
+
+    <style>
+        body {
+            margin: 0;
+            background: #DAF2FF;
+        }
+
+        svg {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+
+        .nav_links {
+            display: grid;
+            background: #69B0D8;
+            width: 250px;
+            height: 100vh;
+        }
+
+        .nav_links a {
+            text-decoration: none;
+            margin-left: 100px;
+            font-family: 'Inter', sans-serif;
+            color: black;
+            font-weight: bold;
+        }
+
+        .tasks_url {
+            display: flex;
+            margin-top: 100px;
+        }
+
+        .tasks_url p {
+            margin-top: 2px;
+        }
+
+        .tasks_url2 {
+            display: flex;
+            margin-top: -20vh;
+        }
+
+        .tasks_url2 p {
+            margin-top: 2px;
+        }
+
+        .tasks_url3 {
+            display: flex;
+            margin-top: -35vh;
+        }
+
+        .tasks_url3 p {
+            margin-top: 2px;
+        }
+
+        .authenticated {
+            margin-left: 400px;
+            margin-top: -100vh;
+        }
+
+        .no_tasks_msg {
+            margin-left: 400px;
+
+        }
+
+        .user_profile {
+            display: flex;
+            margin-left: 65vw;
+        }
+
+        .user_profile p {
+            margin-right: 10px;
+        }
+
+        .user_profile a {
+            margin-top: 15px;
+        }
+
+        .create_task_view {
+            display: flex;
+            margin-left: 50px;
+        }
+
+        .create_task {
+            width: 475px;
+            height: 300px;
+            flex-shrink: 0;
+            border-radius: 20px;
+            background: #69CBD8;
+            margin-left: 300px;
+            display: grid;
+            justify-content: center;
+        }
+
+        .create_task_2 {
+            width: 475px;
+            height: 300px;
+            flex-shrink: 0;
+            border-radius: 20px;
+            background: rgba(0, 209, 255, 0.69);
+            margin-left: 100px;
+            display: grid;
+            justify-content: center;
+        }
+
+        .create_task_2 h1 {
+            margin-left: 20px;
+            color: #FFF;
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .create_task_2 h2 {
+            text-align: center;
+            color: #FFF;
+            font-family: 'Inter', sans-serif;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .create_task h1 {
+            margin-left: 20px;
+            color: #FFF;
+            font-family: 'Inter', sans-serif;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .create_task button {
+            width: 177px;
+            height: 60px;
+            flex-shrink: 0;
+            border-radius: 10px;
+            background: #00A3FF;
+            color: #FFF;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            cursor: pointer;
+        }
+
+        .task_view {
+            display: grid;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .task {
+            display: flex;
+            padding: 5px;
+            background: #92C8E6;
+            width: 1000px;
+            height: 40px;
+            flex-shrink: 0;
+            margin-left: 250px;
+            border-radius: 10px;
+        }
+
+        .task h1 {
+            color: #000;
+            font-family: 'Inter', sans-serif;
+            font-size: 20px;
+            margin-left: 10px;
+            margin-top: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            /* 71.429% */
+        }
+
+        .task_btn {
+            margin-left: 600px;
+            margin-top: 5px;
+        }
+
+        .task_btn_1 {
+            border-radius: 20px;
+            background: rgba(0, 56, 255, 0.63);
+            width: 58px;
+            height: 30px;
+            flex-shrink: 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        .task_btn_2 {
+            border-radius: 20px;
+            background: rgba(250, 12, 12, 0.62);
+            width: 58px;
+            height: 30px;
+            flex-shrink: 0;
+            border: none;
+            cursor: pointer;
+        }
+
+        .no_tasks_msg {
+            text-align: center;
+            margin-left: 150px;
+            font-size: 40px;
+            margin-top: 100px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .completed_msg_h1 {
+            color: #414141;
+            text-align: center;
+            margin-left: 50px;
+            margin-top: 60px;
+        }
+    </style>
+
+    <body>
+        <div class="nav_links">
+            <a href="{% url 'dashboard' %}" class="tasks_url"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M19 5V7H15V5H19ZM9 5V11H5V5H9ZM19 13V19H15V13H19ZM9 17V19H5V17H9ZM21 3H13V9H21V3ZM11 3H3V13H11V3ZM21 11H13V21H21V11ZM11 15H3V21H11V15Z"
+                        fill="black" />
+                </svg>
+                <p>Dashboard</p>
+            </a>
+            <a href="{% url 'tasks' %}" class="tasks_url2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 22C12.8 22 13.6 21.9 14.3 21.7C13.9 21.2 13.5 20.6 13.3 19.9C12.9 20 12.4 20 12 20C7.6 20 4 16.4 4 12C4 7.6 7.6 4 12 4C12.8 4 13.5 4.1 14.2 4.3L15.8 2.7C14.6 2.3 13.3 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22ZM6.5 11.5L7.9 10.1L11 13.2L19.6 4.6L21 6L11 16L6.5 11.5ZM19 14L17.74 16.75L15 18L17.74 19.26L19 22L20.25 19.26L23 18L20.25 16.75L19 14Z"
+                        fill="black" />
+                </svg>
+                <p>Tasks</p>
+            </a>
+            <a href="{% url 'notes' %}" class="tasks_url3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M16 9H21.5L16 3.5V9ZM7 2H17L23 8V18C23 18.5304 22.7893 19.0391 22.4142 19.4142C22.0391 19.7893 21.5304 20 21 20H7C5.89 20 5 19.1 5 18V4C5 3.46957 5.21071 2.96086 5.58579 2.58579C5.96086 2.21071 6.46957 2 7 2ZM3 6V22H21V24H3C2.46957 24 1.96086 23.7893 1.58579 23.4142C1.21071 23.0391 1 22.5304 1 22V6H3Z"
+                        fill="black" />
+                </svg>
+                <p>Notes</p>
+            </a>
+        </div>
+        <div class="authenticated">
+
+            {% if request.user.is_authenticated %}
+            <div class="user_profile">
+                <p>{{request.user}}</p>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+            {% else %}
+            <a href="{% url 'login' %}">Login </a>
+            {% endif %}
+        </div>
+
+        <!-- <a href="{%url 'tasks_create'%}">Create post</a> -->
+
+        <div class="create_task_view">
+            <div class="create_task">
+                <h1>Notes</h1>
+                <a href="{%url 'notes_create'%}"><button>+ Add Note</button></a>
+            </div>
+            <div class="create_task_2">
+                <h1>Incomplete Notes</h1>
+                <h2>{{counts}}</h2>
+            </div>
+        </div>
+
+        <!-- <h1>My list</h1>
+
+    <h1>You have {{counts}} pending notes</h1>
+
+    <a href="{%url 'notes_create'%}">Create post</a> -->
+
+
+
+
+        <div>
+            {% for note in notes %}
+
+
+            <div class="task_view">
+                <div class="task">
+                    <h1>{{note.title}}</h1>
+                    <div class="task_btn">
+                        <a href="{%url 'notes_detail' note.id %}"><button class="task_btn_1"
+                                style="background: darkgreen;">View</button></a>
+                        <a href="{%url 'edit_note' note.id %}"><button class="task_btn_1">Edit</button></a>
+                        <a href="{%url 'delete_note' note.id %}"><button class="task_btn_2">Delete</button></a>
+                    </div>
+                </div>
+            </div>
+
+            {% empty %}
+
+            <h2 class="no_tasks_msg">You have no notes!</h2>
+
+            {% endfor %}
+
+            <h1 class="completed_msg_h1">Completd notes: {{counter}}</h1>
+
+        </div>
+
+
+        <!-- <a href="{% url 'dashboard' %}">
+        <h1>Go to dashboard</h1>
+    </a> -->
+
+
+
+
+
+    </body>
+    <!-- <script>
+
+
+    var actions = document.getElementById("action_div")
+
+    var btn = document.getElementById("myBtn");
+
+    var btn2 = document.getElementById("myBtn");
+
+
+    var counter = document.getElementById("counter");
+    var save = document.getElementById("save");
+
+    var media = document.getElementById("media")
+
+    var options = document.getElementById("more_options_btn")
+
+
+
+    // var post_body = document.getElementById("body_p")
+    // var post_id = document.getElementById("prev")
+
+
+
+    var count = 0;
+
+    btn.addEventListener("click", function onClick() {
+        count++;
+        counter.innerText = count;
+
+        btn.style.color = "blue"
+    });
+
+    save.addEventListener("click", function onClick() {
+
+        save.style.color = "#d60505"
+    });
+
+
+    const share = (id) => {
+        let main_media = document.getElementById(`media-${id}`)
+        main_media.style.display = main_media.style.display == 'grid' ? 'none' : 'grid'
+    }
+
+    const more = (id) => {
+        let action_media = document.getElementById(`action_div-${id}`)
+        action_media.style.display = action_media.style.display == 'grid' ? 'none' : 'grid'
+    }
+
+    // save.addEventListener("click", () => {
+    //   localStorage.setItem(`${post_body}`, JSON.stringify(post_body));
+    //   location.href = `${post_id}`;
+    // });
+
+</script> -->
+
+    </html>
+
+    {% endblock content %}
