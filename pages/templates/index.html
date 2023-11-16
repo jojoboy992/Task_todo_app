@@ -284,7 +284,7 @@
                 <h1 class="nav-title">Task.io</h1>
             </div>
             {% if request.user.is_authenticated %}
-            <h1>{{reuest.user}}</h1>
+            <h1>{{reuest.user.username}}</h1>
             {% else %}
             <div class="login_sign_btns">
                 <a href="{% url 'login' %}"><button>Login</button></a>
