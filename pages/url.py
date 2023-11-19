@@ -59,6 +59,7 @@ urlpatterns = [
 
     path('Delete_todo/<int:pk>/', TaskDelete.as_view(),name='delete'),
     path('Delete_Note/<int:pk>/', NoteDelete.as_view(),name='delete_note'),
+    
 
 
 

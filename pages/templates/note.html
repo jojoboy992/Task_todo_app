@@ -43,6 +43,7 @@
         .tasks_url {
             display: flex;
             margin-top: 100px;
+            padding: 15px;
         }
 
         .tasks_url p {
@@ -52,6 +53,7 @@
         .tasks_url2 {
             display: flex;
             margin-top: -20vh;
+            padding: 15px;
         }
 
         .tasks_url2 p {
@@ -61,6 +63,10 @@
         .tasks_url3 {
             display: flex;
             margin-top: -35vh;
+            background: lightgreen;
+            height: 20px;
+            border-radius: 50px 0px 0px 50px;
+            padding: 15px;
         }
 
         .tasks_url3 p {
@@ -68,7 +74,7 @@
         }
 
         .authenticated {
-            margin-left: 400px;
+            /* margin-left: 400px; */
             margin-top: -100vh;
         }
 
@@ -79,7 +85,8 @@
 
         .user_profile {
             display: flex;
-            margin-left: 65vw;
+            justify-content: flex-end;
+            width: 90%;
         }
 
         .user_profile p {
@@ -92,7 +99,11 @@
 
         .create_task_view {
             display: flex;
-            margin-left: 50px;
+            /* margin-left: 30px; */
+            justify-content: center;
+            /* flex-wrap: wrap; */
+            column-gap: 50px;
+            padding-left: 230px;
         }
 
         .create_task {
@@ -101,7 +112,7 @@
             flex-shrink: 0;
             border-radius: 20px;
             background: #69CBD8;
-            margin-left: 300px;
+            /* margin-left: 300px; */
             display: grid;
             justify-content: center;
         }
@@ -112,9 +123,9 @@
             flex-shrink: 0;
             border-radius: 20px;
             background: rgba(0, 209, 255, 0.69);
-            margin-left: 100px;
+            /* margin-left: 100px; */
             display: grid;
-            justify-content: center;
+
         }
 
         .create_task_2 h1 {
@@ -125,6 +136,8 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            text-align: center;
+
         }
 
         .create_task_2 h2 {
@@ -135,6 +148,8 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            text-align: center;
+
         }
 
         .create_task h1 {
@@ -175,24 +190,27 @@
             width: 1000px;
             height: 40px;
             flex-shrink: 0;
-            margin-left: 250px;
+            column-gap: 500px;
             border-radius: 10px;
         }
 
-        .task h1 {
+        .task a {
             color: #000;
             font-family: 'Inter', sans-serif;
             font-size: 20px;
-            margin-left: 10px;
+            /* width: 900px; */
+            /* margin-left: 10px; */
+            padding-left: 30px;
             margin-top: 10px;
             font-style: normal;
             font-weight: 400;
             line-height: 20px;
-            /* 71.429% */
+            /* text-decoration: none; */
         }
 
         .task_btn {
-            margin-left: 600px;
+            /* margin-left: 600px; */
+            text-align: center;
             margin-top: 5px;
         }
 
@@ -230,6 +248,595 @@
             margin-left: 50px;
             margin-top: 60px;
         }
+
+        .note-items-wrapper {
+            padding-left: 230px;
+        }
+
+        .note-title {
+            text-align: center;
+            font-size: 20px;
+            width: 300px;
+            /* margin-left: -30px; */
+            padding: 10px;
+            display: flex;
+        }
+
+        .note-title a {
+            text-decoration: none;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            display: -webkit-box;
+            max-width: 300px;
+            margin-top: 1px;
+        }
+
+
+        .in_note-title {
+            text-align: center;
+            font-size: 20px;
+            width: 300px;
+            /* margin-left: -30px; */
+            padding: 10px;
+            display: flex;
+        }
+
+        .in_note-title a {
+            text-decoration: none;
+            margin-top: 1px;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            display: -webkit-box;
+            max-width: 290px;
+        }
+
+        .note-complete-icon {
+            width: 20px;
+            height: 20px;
+            background: green;
+            border-radius: 50%;
+        }
+
+        .note-incomplete-icon {
+            width: 20px;
+            height: 20px;
+            max-width: 25px;
+            max-height: 25px;
+            background: red;
+            border-radius: 50%;
+        }
+
+        .about_colour {
+            display: grid;
+            justify-content: center;
+            margin-top: 30px;
+            padding-left: 220px;
+        }
+
+        .colour_1 {
+            display: flex;
+            column-gap: 5px;
+
+        }
+
+        .colour_2 {
+            display: flex;
+            column-gap: 5px;
+        }
+
+        .colour_1 p {
+            margin-top: 1px;
+        }
+
+        .colour_2 p {
+            margin-top: 1px;
+        }
+
+        @media (max-width:1300px) {
+            .create_task {
+                width: 375px;
+                height: 300px;
+            }
+
+            .create_task_2 {
+                width: 375px;
+                height: 300px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 40px;
+            }
+
+            /* .task_view{
+column-gap: 300px;
+} */
+
+            .task {
+                width: 800px;
+                column-gap: 280px;
+
+            }
+        }
+
+        @media (max-width:1100px) {
+            .create_task {
+                width: 300px;
+                height: 300px;
+            }
+
+            .create_task_2 {
+                width: 300px;
+                height: 300px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 40px;
+            }
+
+            .task {
+                width: 600px;
+                column-gap: 100px;
+            }
+
+            .note-title {
+                width: 300px;
+            }
+        }
+
+
+        @media (max-width:960px) {
+            .create_task {
+                width: 260px;
+                height: 300px;
+            }
+
+            .create_task_2 {
+                width: 260px;
+                height: 300px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 40px;
+            }
+
+            .task {
+                width: 560px;
+                column-gap: 50px;
+            }
+
+            .note-title {
+                width: 300px;
+            }
+
+            .nav_links {
+                width: 190px;
+            }
+
+            .nav_links a {
+                margin-left: 40px;
+            }
+        }
+
+        @media (max-width:820px) {
+            .create_task_view {
+                column-gap: 20px;
+                padding-left: 190px;
+            }
+
+            .create_task {
+                width: 260px;
+                height: 300px;
+            }
+
+            .create_task_2 {
+                width: 260px;
+                height: 300px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 40px;
+            }
+
+            .task {
+                width: 560px;
+                column-gap: 50px;
+            }
+
+            .note-title {
+                width: 300px;
+            }
+
+            .nav_links {
+                width: 190px;
+            }
+
+            .nav_links a {
+                margin-left: 40px;
+            }
+
+            .note-items-wrapper {
+                padding-left: 190px;
+            }
+        }
+
+        @media (max-width:780px) {
+            .create_task_view {
+                column-gap: 20px;
+                padding-left: 190px;
+            }
+
+            .create_task {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 35px;
+            }
+
+            .task {
+                width: 460px;
+                column-gap: 90px;
+            }
+
+            .note-title {
+                width: 150px;
+            }
+
+            .in_note-title {
+                width: 150px;
+            }
+
+            .nav_links {
+                width: 190px;
+            }
+
+            .nav_links a {
+                margin-left: 40px;
+            }
+
+            .note-items-wrapper {
+                padding-left: 190px;
+            }
+        }
+
+        @media (max-width:680px) {
+            .create_task_view {
+                column-gap: 90px;
+                padding-left: 0px;
+                margin-top: 100px;
+            }
+
+            .create_task {
+                width: 220px;
+                height: 250px;
+            }
+
+            .tasks_url3 {
+                background: none;
+            }
+
+            .create_task_2 {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 35px;
+            }
+
+            .task {
+                width: 540px;
+                column-gap: 90px;
+            }
+
+            .note-items-wrapper {
+                padding-left: 0px;
+            }
+
+            .note-title {
+                width: 200px;
+            }
+
+            .in_note-title {
+                width: 200px;
+            }
+
+            .nav_links {
+                width: 190px;
+                /* height: 50vh; */
+                /* margin: 0; */
+                display: flex;
+                background: none;
+            }
+
+            .nav_links a {
+                /* margin-left: 40px; */
+                color: red;
+                z-index: 6;
+                margin: 10px;
+                padding: 60px;
+            }
+        }
+
+        @media (max-width:650px) {
+            .create_task_view {
+                column-gap: 90px;
+                padding-left: 70px;
+                margin-top: 100px;
+            }
+
+            .create_task {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 35px;
+            }
+
+            .task {
+                width: 540px;
+                column-gap: 90px;
+            }
+
+            .note-items-wrapper {
+                padding-left: 70px;
+            }
+
+            .note-title {
+                width: 200px;
+            }
+
+            .in_note-title {
+                width: 200px;
+            }
+
+            .nav_links {
+                width: 190px;
+                /* height: 50vh; */
+                /* margin: 0; */
+                display: flex;
+                background: none;
+            }
+
+            .nav_links a {
+                /* margin-left: 40px; */
+                color: red;
+                z-index: 6;
+                margin: 10px;
+                padding: 60px;
+            }
+
+
+        }
+
+        @media (max-width:530px) {
+            .create_task_view {
+                column-gap: 40px;
+                padding-left: 160px;
+                margin-top: 100px;
+            }
+
+            .create_task {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 35px;
+            }
+
+            .task {
+                width: 480px;
+                column-gap: 10px;
+            }
+
+            .note-items-wrapper {
+                padding-left: 160px;
+            }
+
+            .note-title {
+                width: 200px;
+            }
+
+            .nav_links {
+                width: 190px;
+                /* height: 50vh; */
+                /* margin: 0; */
+                display: flex;
+                background: none;
+            }
+
+            .nav_links a {
+                /* margin-left: 40px; */
+                color: red;
+                z-index: 6;
+                margin: 10px;
+                padding: 30px;
+                font-size: 30px;
+            }
+
+
+        }
+
+        @media (max-width:470px) {
+            .create_task_view {
+                column-gap: 40px;
+                padding-left: 250px;
+                margin-top: 100px;
+            }
+
+            .create_task {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 35px;
+            }
+
+            .task {
+                width: 480px;
+                column-gap: 10px;
+            }
+
+            .note-items-wrapper {
+                padding-left: 250px;
+            }
+
+            .note-title {
+                width: 200px;
+            }
+
+            .nav_links {
+                width: 190px;
+                /* height: 50vh; */
+                /* margin: 0; */
+                display: flex;
+                background: none;
+            }
+
+            .nav_links a {
+                /* margin-left: 40px; */
+                color: red;
+                z-index: 6;
+                margin: 10px;
+                padding: 30px;
+            }
+
+
+        }
+
+        @media (max-width:391px) {
+            .create_task_view {
+                column-gap: 40px;
+                padding-left: 250px;
+                margin-top: 100px;
+            }
+
+            .create_task {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 35px;
+            }
+
+            .task {
+                width: 480px;
+                column-gap: 10px;
+            }
+
+            .note-items-wrapper {
+                padding-left: 250px;
+            }
+
+            .note-title {
+                width: 200px;
+            }
+
+            .nav_links {
+                width: 190px;
+                /* height: 50vh; */
+                /* margin: 0; */
+                display: flex;
+                background: none;
+            }
+
+            .nav_links a {
+                /* margin-left: 40px; */
+                color: red;
+                z-index: 6;
+                margin: 10px;
+                padding: 30px;
+                font-size: 25px;
+            }
+
+
+        }
+
+        @media (max-width:300px) {
+            .create_task_view {
+                column-gap: 40px;
+                padding-left: 300px;
+                margin-top: 100px;
+            }
+
+            .create_task {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 {
+                width: 220px;
+                height: 250px;
+            }
+
+            .create_task_2 h1 {
+                font-size: 35px;
+            }
+
+            .task {
+                width: 480px;
+                column-gap: 10px;
+            }
+
+            .note-items-wrapper {
+                padding-left: 300px;
+            }
+
+            .note-title {
+                width: 200px;
+            }
+
+            .nav_links {
+                width: 190px;
+                /* height: 50vh; */
+                /* margin: 0; */
+                display: flex;
+                background: none;
+            }
+
+            .nav_links a {
+                /* margin-left: 40px; */
+                color: red;
+                z-index: 6;
+                margin: 10px;
+                padding: 30px;
+                font-size: 25px;
+            }
+
+
+        }
     </style>
 
     <body>
@@ -263,7 +870,7 @@
 
             {% if request.user.is_authenticated %}
             <div class="user_profile">
-                <p>{{request.user}}</p>
+                <p>{{request.user|title}}</p>
                 <a href="{% url 'logout' %}">Logout</a>
             </div>
             {% else %}
@@ -290,34 +897,55 @@
 
     <a href="{%url 'notes_create'%}">Create post</a> -->
 
+        <div class="about_colour">
+            <div class="colour_1">
+                <div class="note-complete-icon"></div>
+                <p>-Completed</p>
+            </div>
 
+            <div class="colour_2">
+                <div class="note-incomplete-icon"></div>
+                <p>-Incomplete</p>
+            </div>
 
-
-        <div>
+        </div>
+        <div class="note-items-wrapper">
             {% for note in notes %}
-
-
-            <div class="task_view">
-                <div class="task">
-                    <h1>{{note.title}}</h1>
-                    <div class="task_btn">
-                        <a href="{%url 'notes_detail' note.id %}"><button class="task_btn_1"
-                                style="background: darkgreen;">View</button></a>
-                        <a href="{%url 'edit_note' note.id %}"><button class="task_btn_1">Edit</button></a>
-                        <a href="{%url 'delete_note' note.id %}"><button class="task_btn_2">Delete</button></a>
+            <div class="note-wrapper">
+                <div class="task_view">
+                    <div class="task">
+                        {% if note.Is_note_complete_skip_if_no %}
+                        <div class="note-title">
+                            <div class="note-complete-icon"></div>
+                            <a href="{%url 'notes_detail' note.id %}">{{note.title}}</a>
+                        </div>
+                        <div class="task_btn">
+                            <a href="{%url 'edit_note' note.id %}"><button class="task_btn_1">Edit</button></a>
+                            <a href="{%url 'delete_note' note.id %}"><button class="task_btn_2">Delete</button></a>
+                        </div>
                     </div>
                 </div>
+
+                {% else %}
+                <div class="in_note-title">
+                    <div class="note-incomplete-icon"></div>
+                    <a href="{%url 'notes_detail' note.id %}">{{note.title}}</a>
+                </div>
+                <div class="task_btn">
+                    <a href="{%url 'edit_note' note.id %}"><button class="task_btn_1">Edit</button></a>
+                    <a href="{%url 'delete_note' note.id %}"><button class="task_btn_2">Delete</button></a>
+                </div>
+                {% endif %}
             </div>
 
             {% empty %}
-
-            <h2 class="no_tasks_msg">You have no notes!</h2>
+            <h3>You have no notes!</h3>
 
             {% endfor %}
 
             <h1 class="completed_msg_h1">Completd notes: {{counter}}</h1>
-
         </div>
+
 
 
         <!-- <a href="{% url 'dashboard' %}">

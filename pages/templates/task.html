@@ -16,6 +16,7 @@
         background: #DAF2FF;
     }
 
+
     svg {
         width: 24px;
         height: 24px;
@@ -41,6 +42,8 @@
     .tasks_url {
         display: flex;
         margin-top: 100px;
+        padding: 15px;
+
     }
 
     .tasks_url p {
@@ -50,6 +53,11 @@
     .tasks_url2 {
         display: flex;
         margin-top: -20vh;
+        /* background: red; */
+        background: lightgreen;
+        height: 20px;
+        border-radius: 50px 0px 0px 50px;
+        padding: 15px;
     }
 
     .tasks_url2 p {
@@ -59,6 +67,8 @@
     .tasks_url3 {
         display: flex;
         margin-top: -35vh;
+        padding: 15px;
+
     }
 
     .tasks_url3 p {
@@ -66,7 +76,7 @@
     }
 
     .authenticated {
-        margin-left: 400px;
+        /* margin-left: 400px; */
         margin-top: -100vh;
     }
 
@@ -77,7 +87,8 @@
 
     .user_profile {
         display: flex;
-        margin-left: 65vw;
+        justify-content: flex-end;
+        width: 90%;
     }
 
     .user_profile p {
@@ -90,7 +101,11 @@
 
     .create_task_view {
         display: flex;
-        margin-left: 50px;
+        /* margin-left: 30px; */
+        justify-content: center;
+        /* flex-wrap: wrap; */
+        column-gap: 50px;
+        padding-left: 230px;
     }
 
     .create_task {
@@ -99,7 +114,7 @@
         flex-shrink: 0;
         border-radius: 20px;
         background: #69CBD8;
-        margin-left: 300px;
+        /* margin-left: 300px; */
         display: grid;
         justify-content: center;
     }
@@ -110,9 +125,9 @@
         flex-shrink: 0;
         border-radius: 20px;
         background: rgba(0, 209, 255, 0.69);
-        margin-left: 100px;
+        /* margin-left: 100px; */
         display: grid;
-        justify-content: center;
+
     }
 
     .create_task_2 h1 {
@@ -123,6 +138,8 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-align: center;
+
     }
 
     .create_task_2 h2 {
@@ -133,6 +150,8 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        text-align: center;
+
     }
 
     .create_task h1 {
@@ -173,7 +192,7 @@
         width: 1000px;
         height: 40px;
         flex-shrink: 0;
-        margin-left: 250px;
+        column-gap: 500px;
         border-radius: 10px;
     }
 
@@ -181,17 +200,19 @@
         color: #000;
         font-family: 'Inter', sans-serif;
         font-size: 20px;
-        margin-left: 10px;
+        /* width: 900px; */
+        /* margin-left: 10px; */
+        padding-left: 30px;
         margin-top: 10px;
         font-style: normal;
         font-weight: 400;
         line-height: 20px;
-        text-decoration: none;
-        /* 71.429% */
+        /* text-decoration: none; */
     }
 
     .task_btn {
-        margin-left: 600px;
+        /* margin-left: 600px; */
+        text-align: center;
         margin-top: 5px;
     }
 
@@ -229,93 +250,690 @@
         margin-left: 50px;
         margin-top: 60px;
     }
+
+    .note-items-wrapper {
+        padding-left: 230px;
+    }
+
+    .note-title {
+        text-align: center;
+        font-size: 20px;
+        width: 300px;
+        /* margin-left: -30px; */
+        padding: 10px;
+        display: flex;
+    }
+
+    .note-title a {
+        text-decoration: none;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        max-width: 300px;
+        margin-top: 1px;
+    }
+
+
+    .in_note-title {
+        text-align: center;
+        font-size: 20px;
+        width: 300px;
+        /* margin-left: -30px; */
+        padding: 10px;
+        display: flex;
+    }
+
+    .in_note-title a {
+        text-decoration: none;
+        margin-top: 1px;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        display: -webkit-box;
+        max-width: 290px;
+    }
+
+    .note-complete-icon {
+        width: 20px;
+        height: 20px;
+        background: green;
+        border-radius: 50%;
+    }
+
+    .note-incomplete-icon {
+        width: 20px;
+        height: 20px;
+        max-width: 25px;
+        max-height: 25px;
+        background: red;
+        border-radius: 50%;
+    }
+
+    .about_colour {
+        display: grid;
+        justify-content: center;
+        margin-top: 30px;
+        padding-left: 220px;
+    }
+
+    .colour_1 {
+        display: flex;
+        column-gap: 5px;
+
+    }
+
+    .colour_2 {
+        display: flex;
+        column-gap: 5px;
+    }
+
+    .colour_1 p {
+        margin-top: 1px;
+    }
+
+    .colour_2 p {
+        margin-top: 1px;
+    }
+
+    @media (max-width:1300px) {
+        .create_task {
+            width: 375px;
+            height: 300px;
+        }
+
+        .create_task_2 {
+            width: 375px;
+            height: 300px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 40px;
+        }
+
+        /* .task_view{
+column-gap: 300px;
+} */
+
+        .task {
+            width: 800px;
+        }
+    }
+
+    @media (max-width:1100px) {
+        .create_task {
+            width: 300px;
+            height: 300px;
+        }
+
+        .create_task_2 {
+            width: 300px;
+            height: 300px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 40px;
+        }
+
+        .task {
+            width: 600px;
+            column-gap: 200px;
+        }
+
+        .note-title {
+            width: 300px;
+        }
+    }
+
+
+    @media (max-width:960px) {
+        .create_task {
+            width: 260px;
+            height: 300px;
+        }
+
+        .create_task_2 {
+            width: 260px;
+            height: 300px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 40px;
+        }
+
+        .task {
+            width: 560px;
+            column-gap: 200px;
+        }
+
+        .note-title {
+            width: 300px;
+        }
+
+        .nav_links {
+            width: 190px;
+        }
+
+        .nav_links a {
+            margin-left: 40px;
+        }
+    }
+
+    @media (max-width:820px) {
+        .create_task_view {
+            column-gap: 20px;
+            padding-left: 190px;
+        }
+
+        .create_task {
+            width: 260px;
+            height: 300px;
+        }
+
+        .create_task_2 {
+            width: 260px;
+            height: 300px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 40px;
+        }
+
+        .task {
+            width: 560px;
+            column-gap: 200px;
+        }
+
+        .note-title {
+            width: 300px;
+        }
+
+        .nav_links {
+            width: 190px;
+        }
+
+        .nav_links a {
+            margin-left: 40px;
+        }
+
+        .note-items-wrapper {
+            padding-left: 190px;
+        }
+    }
+
+    @media (max-width:780px) {
+        .create_task_view {
+            column-gap: 20px;
+            padding-left: 190px;
+        }
+
+        .create_task {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 35px;
+        }
+
+        .task {
+            width: 460px;
+            column-gap: 200px;
+        }
+
+        .note-title {
+            width: 300px;
+        }
+
+        .nav_links {
+            width: 190px;
+        }
+
+        .nav_links a {
+            margin-left: 40px;
+        }
+
+        .note-items-wrapper {
+            padding-left: 190px;
+        }
+    }
+
+    @media (max-width:680px) {
+        .create_task_view {
+            column-gap: 90px;
+            padding-left: 0px;
+            margin-top: 100px;
+        }
+
+        .create_task {
+            width: 220px;
+            height: 250px;
+        }
+
+        .tasks_url2 {
+            background: none;
+        }
+
+        .create_task_2 {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 35px;
+        }
+
+        .task {
+            width: 540px;
+            column-gap: 200px;
+        }
+
+        .note-items-wrapper {
+            padding-left: 0px;
+        }
+
+        .note-title {
+            width: 300px;
+        }
+
+        .nav_links {
+            width: 190px;
+            /* height: 50vh; */
+            /* margin: 0; */
+            display: flex;
+            background: none;
+        }
+
+        .nav_links a {
+            /* margin-left: 40px; */
+            color: red;
+            z-index: 6;
+            margin: 10px;
+            padding: 60px;
+        }
+    }
+
+    @media (max-width:650px) {
+        .create_task_view {
+            column-gap: 90px;
+            padding-left: 70px;
+            margin-top: 100px;
+        }
+
+        .create_task {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 35px;
+        }
+
+        .task {
+            width: 540px;
+            column-gap: 200px;
+        }
+
+        .note-items-wrapper {
+            padding-left: 70px;
+        }
+
+        .note-title {
+            width: 300px;
+        }
+
+        .nav_links {
+            width: 190px;
+            /* height: 50vh; */
+            /* margin: 0; */
+            display: flex;
+            background: none;
+        }
+
+        .nav_links a {
+            /* margin-left: 40px; */
+            color: red;
+            z-index: 6;
+            margin: 10px;
+            padding: 60px;
+        }
+
+
+    }
+
+    @media (max-width:530px) {
+        .create_task_view {
+            column-gap: 40px;
+            padding-left: 160px;
+            margin-top: 100px;
+        }
+
+        .create_task {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 35px;
+        }
+
+        .task {
+            width: 480px;
+            column-gap: 200px;
+        }
+
+        .note-items-wrapper {
+            padding-left: 160px;
+        }
+
+        .note-title {
+            width: 200px;
+        }
+
+        .nav_links {
+            width: 190px;
+            /* height: 50vh; */
+            /* margin: 0; */
+            display: flex;
+            background: none;
+        }
+
+        .nav_links a {
+            /* margin-left: 40px; */
+            color: red;
+            z-index: 6;
+            margin: 10px;
+            padding: 30px;
+            font-size: 30px;
+        }
+
+
+    }
+
+    @media (max-width:470px) {
+        .create_task_view {
+            column-gap: 40px;
+            padding-left: 250px;
+            margin-top: 100px;
+        }
+
+        .create_task {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 35px;
+        }
+
+        .task {
+            width: 480px;
+            column-gap: 200px;
+        }
+
+        .note-items-wrapper {
+            padding-left: 250px;
+        }
+
+        .note-title {
+            width: 200px;
+        }
+
+        .nav_links {
+            width: 190px;
+            /* height: 50vh; */
+            /* margin: 0; */
+            display: flex;
+            background: none;
+        }
+
+        .nav_links a {
+            /* margin-left: 40px; */
+            color: red;
+            z-index: 6;
+            margin: 10px;
+            padding: 30px;
+        }
+
+
+    }
+
+    @media (max-width:391px) {
+        .create_task_view {
+            column-gap: 40px;
+            padding-left: 250px;
+            margin-top: 100px;
+        }
+
+        .create_task {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 35px;
+        }
+
+        .task {
+            width: 480px;
+            column-gap: 200px;
+        }
+
+        .note-items-wrapper {
+            padding-left: 250px;
+        }
+
+        .note-title {
+            width: 200px;
+        }
+
+        .nav_links {
+            width: 190px;
+            /* height: 50vh; */
+            /* margin: 0; */
+            display: flex;
+            background: none;
+        }
+
+        .nav_links a {
+            /* margin-left: 40px; */
+            color: red;
+            z-index: 6;
+            margin: 10px;
+            padding: 30px;
+            font-size: 25px;
+        }
+
+
+    }
+
+    @media (max-width:300px) {
+        .create_task_view {
+            column-gap: 40px;
+            padding-left: 300px;
+            margin-top: 100px;
+        }
+
+        .create_task {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 {
+            width: 220px;
+            height: 250px;
+        }
+
+        .create_task_2 h1 {
+            font-size: 35px;
+        }
+
+        .task {
+            width: 480px;
+            column-gap: 200px;
+        }
+
+        .note-items-wrapper {
+            padding-left: 300px;
+        }
+
+        .note-title {
+            width: 200px;
+        }
+
+        .nav_links {
+            width: 190px;
+            /* height: 50vh; */
+            /* margin: 0; */
+            display: flex;
+            background: none;
+        }
+
+        .nav_links a {
+            /* margin-left: 40px; */
+            color: red;
+            z-index: 6;
+            margin: 10px;
+            padding: 30px;
+            font-size: 25px;
+        }
+
+
+    }
 </style>
 
 <body>
-    <div class="nav_links">
-        <a href="{% url 'dashboard' %}" class="tasks_url"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                viewBox="0 0 24 24" fill="none">
-                <path
-                    d="M19 5V7H15V5H19ZM9 5V11H5V5H9ZM19 13V19H15V13H19ZM9 17V19H5V17H9ZM21 3H13V9H21V3ZM11 3H3V13H11V3ZM21 11H13V21H21V11ZM11 15H3V21H11V15Z"
-                    fill="black" />
-            </svg>
-            <p>Dashboard</p>
-        </a>
-        <a href="{% url 'tasks' %}" class="tasks_url2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                viewBox="0 0 24 24" fill="none">
-                <path
-                    d="M12 22C12.8 22 13.6 21.9 14.3 21.7C13.9 21.2 13.5 20.6 13.3 19.9C12.9 20 12.4 20 12 20C7.6 20 4 16.4 4 12C4 7.6 7.6 4 12 4C12.8 4 13.5 4.1 14.2 4.3L15.8 2.7C14.6 2.3 13.3 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22ZM6.5 11.5L7.9 10.1L11 13.2L19.6 4.6L21 6L11 16L6.5 11.5ZM19 14L17.74 16.75L15 18L17.74 19.26L19 22L20.25 19.26L23 18L20.25 16.75L19 14Z"
-                    fill="black" />
-            </svg>
-            <p>Tasks</p>
-        </a>
-        <a href="{% url 'notes' %}" class="tasks_url3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                viewBox="0 0 24 24" fill="none">
-                <path
-                    d="M16 9H21.5L16 3.5V9ZM7 2H17L23 8V18C23 18.5304 22.7893 19.0391 22.4142 19.4142C22.0391 19.7893 21.5304 20 21 20H7C5.89 20 5 19.1 5 18V4C5 3.46957 5.21071 2.96086 5.58579 2.58579C5.96086 2.21071 6.46957 2 7 2ZM3 6V22H21V24H3C2.46957 24 1.96086 23.7893 1.58579 23.4142C1.21071 23.0391 1 22.5304 1 22V6H3Z"
-                    fill="black" />
-            </svg>
-            <p>Notes</p>
-        </a>
-    </div>
-    <div class="authenticated">
-
-        {% if request.user.is_authenticated %}
-        <div class="user_profile">
-            <p>{{request.user}}</p>
-            <a href="{% url 'logout' %}">Logout</a>
+    <div class="main_div">
+        <div class="nav_links">
+            <a href="{% url 'dashboard' %}" class="tasks_url"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M19 5V7H15V5H19ZM9 5V11H5V5H9ZM19 13V19H15V13H19ZM9 17V19H5V17H9ZM21 3H13V9H21V3ZM11 3H3V13H11V3ZM21 11H13V21H21V11ZM11 15H3V21H11V15Z"
+                        fill="black" />
+                </svg>
+                <p>Dashboard</p>
+            </a>
+            <a href="{% url 'tasks' %}" class="tasks_url2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M12 22C12.8 22 13.6 21.9 14.3 21.7C13.9 21.2 13.5 20.6 13.3 19.9C12.9 20 12.4 20 12 20C7.6 20 4 16.4 4 12C4 7.6 7.6 4 12 4C12.8 4 13.5 4.1 14.2 4.3L15.8 2.7C14.6 2.3 13.3 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22ZM6.5 11.5L7.9 10.1L11 13.2L19.6 4.6L21 6L11 16L6.5 11.5ZM19 14L17.74 16.75L15 18L17.74 19.26L19 22L20.25 19.26L23 18L20.25 16.75L19 14Z"
+                        fill="black" />
+                </svg>
+                <p>Tasks</p>
+            </a>
+            <a href="{% url 'notes' %}" class="tasks_url3"><svg xmlns="http://www.w3.org/2000/svg" width="24"
+                    height="24" viewBox="0 0 24 24" fill="none">
+                    <path
+                        d="M16 9H21.5L16 3.5V9ZM7 2H17L23 8V18C23 18.5304 22.7893 19.0391 22.4142 19.4142C22.0391 19.7893 21.5304 20 21 20H7C5.89 20 5 19.1 5 18V4C5 3.46957 5.21071 2.96086 5.58579 2.58579C5.96086 2.21071 6.46957 2 7 2ZM3 6V22H21V24H3C2.46957 24 1.96086 23.7893 1.58579 23.4142C1.21071 23.0391 1 22.5304 1 22V6H3Z"
+                        fill="black" />
+                </svg>
+                <p>Notes</p>
+            </a>
         </div>
-        {% else %}
-        <a href="{% url 'login' %}">Login </a>
-        {% endif %}
+        <div class="authenticated">
+
+            {% if request.user.is_authenticated %}
+            <div class="user_profile">
+                <p>{{request.user|title}}</p>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+            {% else %}
+            <a href="{% url 'login' %}">Login </a>
+            {% endif %}
+        </div>
+
+
+        <!-- <h1>You have {{count}} pending tasks</h1> -->
+
+        <!-- <a href="{%url 'tasks_create'%}">Create post</a> -->
+
+        <div class="create_task_view">
+            <div class="create_task">
+                <h1>Tasks</h1>
+                <a href="{%url 'tasks_create'%}"><button>+ Add Task</button></a>
+            </div>
+            <div class="create_task_2">
+                <h1>Incomplete Tasks</h1>
+                <h2>{{count}}</h2>
+            </div>
+        </div>
     </div>
 
 
-    <!-- <h1>You have {{count}} pending tasks</h1> -->
 
-    <!-- <a href="{%url 'tasks_create'%}">Create post</a> -->
 
-    <div class="create_task_view">
-        <div class="create_task">
-            <h1>Tasks</h1>
-            <a href="{%url 'tasks_create'%}"><button>+ Add Task</button></a>
+    <div class="about_colour">
+        <div class="colour_1">
+            <div class="note-complete-icon"></div>
+            <p>-Completed</p>
         </div>
-        <div class="create_task_2">
-            <h1>Incomplete Tasks</h1>
-            <h2>{{count}}</h2>
+
+        <div class="colour_2">
+            <div class="note-incomplete-icon"></div>
+            <p>-Incomplete</p>
         </div>
+
     </div>
 
-
-
-    <div>
+    <div class="note-items-wrapper">
         {% for task in tasks %}
-
-
-        <div class="task_view">
-            <div class="task">
-                <a href="{%url 'edit' task.id %}">{{task.title}}</a>
-                <div class="task_btn">
-                    <!-- <a href="{%url 'edit' task.id %}"><button class="task_btn_1">Edit</button></a> -->
-                    <a href="{%url 'delete' task.id %}"><button class="task_btn_2">Delete</button></a>
+        <div class="note-wrapper">
+            <div class="task_view">
+                <div class="task">
+                    {% if task.Is_task_complete_skip_if_no %}
+                    <div class="note-title">
+                        <div class="note-complete-icon"></div>
+                        <i><s><a href="{%url 'edit' task.id %}">{{task.title}}</a></s></i>
+                    </div>
+                    <div class="task_btn">
+                        <a href="{%url 'delete' task.id %}"><button class="task_btn_2">Delete</button></a>
+                    </div>
                 </div>
             </div>
+
+            {% else %}
+            <div class="in_note-title">
+                <div class="note-incomplete-icon"></div>
+                <a href="{%url 'edit' task.id %}">{{task.title}}</a>
+            </div>
+            <div class="task_btn">
+                <a href="{%url 'delete' task.id %}"><button class="task_btn_2">Delete</button></a>
+            </div>
+            {% endif %}
         </div>
 
         {% empty %}
-
-        <h2 class="no_tasks_msg">You have no tasks!</h2>
+        <h3>You have no tasks!</h3>
 
         {% endfor %}
 
-        <h1 class="completed_msg_h1">Completd tasks: {{counter}}</h1>
-
+        <h1 class="completed_msg_h1">Completd notes: {{counter}}</h1>
     </div>
-
-
-
-
-
 
 
 </body>

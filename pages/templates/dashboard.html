@@ -26,21 +26,29 @@
     .nav_links {
         display: grid;
         background: #69B0D8;
-        width: 250px;
+        width: 150px;
         height: 100vh;
+        padding-left: 100px;
     }
 
     .nav_links a {
         text-decoration: none;
-        margin-left: 100px;
+        /* margin-left: 100px; */
+        justify-content: center;
         font-family: 'Inter', sans-serif;
         color: black;
         font-weight: bold;
+        width: 120px;
     }
 
     .tasks_url {
         display: flex;
         margin-top: 100px;
+        background: lightgreen;
+        height: 20px;
+        border-radius: 50px 0px 0px 50px;
+        padding: 15px;
+        /* width: 100px; */
     }
 
     .tasks_url p {
@@ -49,21 +57,38 @@
 
     .tasks_url2 {
         display: flex;
-        margin-top: -20vh;
+        height: 70px;
+        /* padding: 0;
+        margin: 0; */
+        margin-top: -25vh;
+        /* margin-bottom: 100px; */
+    }
+
+    .tasks_url2 svg {
+        margin-top: 13px;
     }
 
     .tasks_url2 p {
-        margin-top: 2px;
+        /* margin-top: 80px; */
+        /* height: 10px; */
+        /* margin-bottom: 30px; */
+        /* background: blue; */
+
     }
 
     .tasks_url3 {
         display: flex;
-        margin-top: -35vh;
+        margin-top: -45vh;
     }
 
     .tasks_url3 p {
-        margin-top: 2px;
+        margin-top: 30px;
     }
+
+    .tasks_url3 svg {
+        margin-top: 25px;
+    }
+
 
     .authenticated {
         margin-left: 400px;
@@ -160,13 +185,17 @@
     }
 
     .welcome_h1 {
-        margin-left: 400px;
+        /* margin-left: 400px; */
+        text-align: center;
+        padding-left: 200px;
+
     }
 
     .task_count {
         display: grid;
-        margin-left: 180px;
+        /* margin-left: 180px; */
         margin-top: 40px;
+        padding-left: 200px;
     }
 
     .task_count h1 {
@@ -180,16 +209,19 @@
 
     .tasks_count {
         display: flex;
-        margin-left: 80px;
+        /* margin-left: 80px; */
         justify-content: center;
     }
 
 
     .note_count {
         display: grid;
-        margin-left: 180px;
+        /* margin-left: 180px; */
+
         margin-top: 130px;
         margin-bottom: 10px;
+        padding-left: 200px;
+
     }
 
     .note_count h1 {
@@ -203,7 +235,7 @@
 
     .notes_count {
         display: flex;
-        margin-left: 80px;
+        /* margin-left: 80px; */
         justify-content: center;
     }
 
@@ -215,7 +247,6 @@
         flex-shrink: 0;
         border-radius: 30px;
         background: rgba(255, 0, 0, 0.54);
-        margin-right: 50px;
     }
 
     .count_1 h1 {
@@ -243,7 +274,6 @@
         flex-shrink: 0;
         border-radius: 30px;
         background: rgba(0, 128, 0, 0.74);
-        margin-right: 50px;
     }
 
     .count_2 h1 {
@@ -264,31 +294,80 @@
         margin-top: -20px;
     }
 
-    .count_3 {
-        display: grid;
-        width: 316px;
-        height: 122px;
-        flex-shrink: 0;
-        border-radius: 30px;
-        background: rgba(0, 128, 0, 0.74);
+    @media(max-width:960px) {
+
+        .welcome_h1 {
+            padding-left: 400px;
+        }
+
+        .task_count {
+            padding-left: 400px;
+        }
+
+        .note_count {
+            padding-left: 400px;
+        }
+
+        .count_1 {
+            width: 400px;
+        }
+
+        .count_2 {
+            width: 400px;
+        }
     }
 
-    .count_3 h1 {
-        color: #fff;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
+    @media(max-width:600px) {
+
+        .welcome_h1 {
+            padding-left: 250px;
+        }
+
+        .task_count {
+            padding-left: 320px;
+        }
+
+        .note_count {
+            padding-left: 320px;
+        }
+
+        .count_1 {
+            width: 400px;
+        }
+
+        .count_2 {
+            width: 400px;
+        }
     }
 
-    .count_3 p {
-        color: #FFF;
-        font-family: 'Katibeh', sans-serif;
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-        margin-top: -20px;
+    @media(max-width:440px) {
+        .welcome_h1 {
+            padding-left: 400px;
+
+        }
+    }
+
+    @media(max-width:400px) {
+
+        .welcome_h1 {
+            padding-left: 350px;
+        }
+
+        .task_count {
+            padding-left: 270px;
+        }
+
+        .note_count {
+            padding-left: 270px;
+        }
+
+        .count_1 {
+            width: 400px;
+        }
+
+        .count_2 {
+            width: 400px;
+        }
     }
 </style>
 
@@ -328,7 +407,7 @@
                     d="M24.5 40.42C18.375 40.42 12.9605 37.412 9.8 32.9C9.8735 28.2 19.6 25.615 24.5 25.615C29.4 25.615 39.1265 28.2 39.2 32.9C36.0395 37.412 30.625 40.42 24.5 40.42ZM24.5 7.05C26.4493 7.05 28.3188 7.79277 29.6972 9.1149C31.0756 10.437 31.85 12.2302 31.85 14.1C31.85 15.9698 31.0756 17.763 29.6972 19.0851C28.3188 20.4072 26.4493 21.15 24.5 21.15C22.5507 21.15 20.6812 20.4072 19.3028 19.0851C17.9244 17.763 17.15 15.9698 17.15 14.1C17.15 12.2302 17.9244 10.437 19.3028 9.1149C20.6812 7.79277 22.5507 7.05 24.5 7.05ZM24.5 0C21.2826 0 18.0967 0.607846 15.1243 1.78883C12.1518 2.96982 9.45092 4.70081 7.17588 6.88299C2.58124 11.2901 0 17.2674 0 23.5C0 29.7326 2.58124 35.7099 7.17588 40.117C9.45092 42.2992 12.1518 44.0302 15.1243 45.2112C18.0967 46.3922 21.2826 47 24.5 47C30.9978 47 37.2295 44.5241 41.8241 40.117C46.4188 35.7099 49 29.7326 49 23.5C49 10.5045 37.975 0 24.5 0Z"
                     fill="#69B0D8" />
             </svg>
-            <p>{{request.user}}</p>
+            <p>{{request.user|title}}</p>
             <a href="{% url 'logout' %}">Logout</a>
         </div>
         {% else %}

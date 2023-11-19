@@ -13,11 +13,17 @@
 <style>
   body {
     background: #69B0D8;
+    /* justify-content: center; */
+  }
+
+  .post {
+    /* justify-content: center; */
+    text-align: center;
   }
 
   section {
     justify-content: center;
-    margin-left: 500px;
+    /* padding-left: 450px; */
     margin-top: 150px;
   }
 
@@ -30,7 +36,11 @@
     height: 40px;
     border-radius: 5px;
     margin: 5px;
-    margin-left: 44px;
+    /* margin-left: 44px; */
+  }
+
+  .submit_btn {
+    padding-right: 200px;
   }
 
   input[type='submit'] {
@@ -39,7 +49,8 @@
     padding: 5px;
     margin-top: 20px;
     border-radius: 5px;
-    margin-left: 90px;
+    /* margin-left: 90px; */
+    /* text-align: center; */
     background: #0171d3;
     color: white;
     font-size: 20px;
@@ -79,13 +90,17 @@
     color: blue;
   }
 
+.cancel{
+  padding-left: 300px;
+}
+
   .cancel_btn {
     width: 200px;
     height: 50px;
     padding: 5px;
     margin-top: -60px;
     border-radius: 5px;
-    margin-left: 300px;
+    /* margin-left: 300px; */
     background: darkred;
     color: white;
     font-size: 20px;
@@ -93,7 +108,7 @@
     cursor: pointer;
   }
 
-  a{
+  a {
     margin-top: -38px;
   }
 </style>
@@ -101,19 +116,21 @@
 
 <body>
   <h1 class="new_h1">New Note</h1>
+  <div class="post">
+    <section>
 
-  <section>
+      <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <div class="submit_btn"> <input type="submit" value="Submit note" id="post" /></div>
 
-    <form action="" method="post" enctype="multipart/form-data">
-      {% csrf_token %}
-      {{ form.as_p }}
-      <input type="submit" value="Submit note" id="post" />
 
-    </form>
-    <a href="{% url 'notes' %}"><button class="cancel_btn">Cancel</button></a>
-
-  </section>
-
+      </form>
+      <div class="cancel">
+        <a href="{% url 'notes' %}"><button class="cancel_btn">Cancel</button></a>
+      </div>
+    </section>
+  </div>
 </body>
 
 {% endblock content %}
