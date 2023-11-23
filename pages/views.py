@@ -178,7 +178,7 @@ class TaskCreate(LoginRequiredMixin,CreateView):
 
 class TaskEdit(LoginRequiredMixin,UpdateView):
     model = Task
-    template_name = 'post_edit.html'
+    template_name = 'task_edit.html'
     fields = ['title','description','Is_task_complete_skip_if_no']
     success_url = reverse_lazy('tasks')
     context_object_name = 'edit'
@@ -209,32 +209,28 @@ class DashBoard(LoginRequiredMixin ,ListView):
         context_1['counter'] = context_1['dashboard'].filter(Is_task_complete_skip_if_no=True).count()
         context_1['count3'] = context_1['dashboard'].filter(Is_task_complete_skip_if_no=True).count() + context_1['dashboard'].filter(Is_task_complete_skip_if_no=False).count() 
 
-        # context_2 = super().get_context_data(**kwargs)
-        # context_2['dashboard2'] = context_2['dashboard2'].filter(user=self.request.user)
-        # context_2['note_count'] = context_2['dashboard2'].filter(Is_note_complete_skip_if_no=False).count()
-        # context_2['note_counter'] = context_2['dashboard2'].filter(Is_note_complete_skip_if_no=True).count()
-        # context_2['note_count3'] = context_2['dashboard2'].filter(Is_note_complete_skip_if_no=True).count() + context_2['dashboard2'].filter(Is_note_complete_skip_if_no=False).count() 
-
-
-
-        
 
         return context_1
+    
+   
+        
 
         
 
 # class DashBoard2(LoginRequiredMixin ,ListView):
 #     model = Note
 #     template_name = 'dashboard.html'
-#     context_object_name = 'dash'
-#     fields = ["completed"]
+#     context_object_name = 'dashboard'
+#     fields = ["Is_note_complete_skip_if_no" ]
 
 #     def get_context_data(self, **kwargs):
-#         context_1 = super().get_context_data(**kwargs)
-#         context_1['dash'] = context_1['dash'].filter(user=self.request.user)
-#         context_1['counts'] = context_1['dash'].filter(completed=False).count()
-      
-#         return context_1    
+#         context_2 = super().get_context_data(**kwargs)
+#         context_2['dashboard'] = context_2['dashboard'].filter(user=self.request.user)
+#         context_2['count_2'] = context_2['dashboard'].filter(Is_note_complete_skip_if_no=False).count()
+#         context_2['counter_2'] = context_2['dashboard'].filter(Is_note_complete_skip_if_no=True).count()
+#         context_2['count3_2'] = context_2['dashboard'].filter(Is_note_complete_skip_if_no=True).count() + context_2['dashboard'].filter(Is_note_complete_skip_if_no=False).count() 
+
+#         return context_2   
 
 class NoteView(LoginRequiredMixin ,ListView):
     model = Note

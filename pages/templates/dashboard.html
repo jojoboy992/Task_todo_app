@@ -30,6 +30,7 @@
         width: 150px;
         height: 100vh;
         padding-left: 100px;
+        position: fixed;
     }
 
     .nav_links a {
@@ -69,13 +70,6 @@
         margin-top: 13px;
     }
 
-    .tasks_url2 p {
-        /* margin-top: 80px; */
-        /* height: 10px; */
-        /* margin-bottom: 30px; */
-        /* background: blue; */
-
-    }
 
     .tasks_url3 {
         display: flex;
@@ -93,7 +87,6 @@
 
     .authenticated {
         margin-left: 400px;
-        margin-top: -100vh;
     }
 
     .no_tasks_msg {
@@ -343,32 +336,113 @@
 
     @media(max-width:440px) {
         .welcome_h1 {
-            padding-left: 400px;
+            padding-left: 30px;
+            font-size: 25px;
+            width: 300px;
 
         }
     }
 
     @media(max-width:400px) {
 
-        .welcome_h1 {
-            padding-left: 350px;
+        .authenticated {
+            margin-left: -110px;
+            width: 100px;
         }
 
+        .nav_links {
+            width: 50px;
+            padding-left: 0;
+        }
+
+        .nav_links a {
+            width: 20px;
+        }
+
+        .tasks_url p {
+            display: none;
+        }
+
+        .tasks_url2 p {
+            display: none;
+        }
+
+        .tasks_url3 p {
+            display: none;
+        }
+
+        .tasks_url svg {
+            padding-left: 20px;
+        }
+
+        .tasks_url2 svg {
+            padding-left: 45px;
+        }
+
+        .tasks_url3 svg {
+            padding-left: 45px;
+        }
+
+        /* .welcome_h1 {
+            padding-right: 350px;
+        } */
         .task_count {
-            padding-left: 270px;
+            padding-left: 60px;
+            max-width: 320px;
         }
 
-        .note_count {
-            padding-left: 270px;
+        .task_count h1 {
+            padding-right: 50px;
+            width: 210px;
         }
+
+        .tasks_count {
+            padding-right: 50px;
+        }
+
 
         .count_1 {
-            width: 400px;
+            width: 100%;
+            /* padding-left: 0px; */
+            /* height: 0px; */
+            /* padding-right: 20px; */
         }
 
-        .count_2 {
-            width: 400px;
+        .count_1 h1 {
+            padding-left: 70px;
+            width: 150px;
         }
+
+
+
+        .note_count {
+            padding-left: 60px;
+            width: 320px;
+        }
+
+        .note_count h1 {
+            padding-right: 50px;
+            width: 210px;
+        }
+
+        .notes_count {
+            padding-right: 50px;
+        }
+
+
+        .count_2 {
+            width: 100%;
+            /* padding-left: 0px; */
+            /* height: 0px; */
+            /* padding-right: 20px; */
+        }
+
+        .count_2 h1 {
+            padding-left: 70px;
+            width: 150px;
+        }
+
+
     }
 </style>
 

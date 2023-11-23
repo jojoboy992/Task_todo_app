@@ -5,14 +5,23 @@
 {% block title %}
 <title>Delete Post</title>
 {% endblock %}
-{% block extra_head_links %}
+<!-- {% block extra_head_links %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/post.css' %}">
-{% endblock %}
+{% endblock %} -->
 
 {% block a %}
 {% endblock %}
 
 {% block content %}
+
+<style>
+  body{
+    background: #69B0D8;
+  }
+</style>
+
+<body>
+  
 
 <h1>Delete Post</h1>
 
@@ -25,5 +34,7 @@
 <a href="{% url 'tasks' %}">
   <button id="cancel_delete_post_btn">Cancel</button>
 </a>
+
+</body>
 
 {% endblock content %}
